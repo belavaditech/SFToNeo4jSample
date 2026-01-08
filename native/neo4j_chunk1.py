@@ -192,13 +192,38 @@ def run_cypher(cypher):
     except Exception as e:
         return [{"error": str(e)}]
 
+def get_graph_schema():
+    """Fetch current labels and relationships from Neo4j."""
+    try:
+        with neo4j_driver.session() as session:
+            labels = [r["label"] for r in session.run("CALL db.labels() YIELD label RETURN label")]
+            rels = [r["relType"] for r in session.run("CALL db.relationshipTypes() YIELD relationshipType as relType RETURN relType")]
+            return {"labels": labels, "relationships": rels}
+    except:
+        return {"labels": ["Account", "Contact", "Opportunity", "Lead", "Case"], "relationships": ["CONTACTS", "OPPORTUNITIES", "ACCOUNT"]}
+
 def graph_rag_answer(query):
     # 1. Semantic retrieval (Vector)
     sem_hits = semantic_search(query, k=3)
     sem_context = "\n\n".join([file_registry[fid]["text"] for fid, _ in sem_hits])
     
     # 2. Graph retrieval (Cypher)
-    prompt = f"Translate to Neo4j Cypher. Return ONLY the code.\nQuestion: {query}"
+    schema = get_graph_schema()
+    prompt = f"""
+    Translate the user question into a Neo4j Cypher query.
+    
+    ### SCHEMA CONTEXT
+    - Labels: {schema['labels']}
+    - Relationships: {schema['relationships']}
+    - Common Properties: sfid, Name, Industry, StageName, Amount, CloseDate, Email, Phone
+    
+    ### RULES
+    - If a concept (like Industry) is in the property list above, filter by node property (e.g. n.Industry = '...').
+    - Only use the relationship types listed in the context.
+    - Return ONLY the Cypher code (no markdown or explanation).
+    
+    Question: {query}
+    """
     model = genai.GenerativeModel(LLM_MODEL)
     cy_resp = model.generate_content(prompt).text.strip()
     graph_results = run_cypher(cy_resp)
@@ -220,15 +245,20 @@ def multi_hop_reasoning(query):
     """
     Advanced GraphRAG specifically for discovering long-distance relationships.
     """
+    schema = get_graph_schema()
     prompt = f"""
     You are a Graph Expert. Translate the question into a Cypher query that finds PATHS (multi-hop).
-    The graph contains: Account, Contact, Opportunity, Lead, Case.
     
-    RULES:
+    ### SCHEMA CONTEXT
+    - Labels: {schema['labels']}
+    - Relationships: {schema['relationships']}
+    
+    ### RULES:
     1. Use variable length paths if needed: (n)-[*1..3]-(m)
     2. Focus on connecting the entities mentioned in the question.
-    3. Return the nodes and the relationships between them.
-    4. Return ONLY the Cypher code.
+    3. If a concept (like Industry) is a property, use property filtering (e.g. n.Industry = '...').
+    4. Only use the relationship types listed above.
+    5. Return ONLY the Cypher code.
     
     Question: {query}
     """

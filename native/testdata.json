@@ -1,0 +1,321 @@
+[
+    {
+        "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001gK000002bpzRQAQ"
+        },
+        "Id": "001gK000002bpzRQAQ",
+        "Name": "Edge Communications",
+        "Industry": "Electronics",
+        "AnnualRevenue": 139000000,
+        "Opportunities": {
+            "totalSize": 4,
+            "done": true,
+            "records": [
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v59.0/sobjects/Opportunity/006gK000000LmnaQAC"
+                    },
+                    "Id": "006gK000000LmnaQAC",
+                    "Name": "Edge Emergency Generator",
+                    "StageName": "Closed Won",
+                    "Amount": 75000,
+                    "CloseDate": "2025-03-23"
+                },
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v59.0/sobjects/Opportunity/006gK000000LmnhQAC"
+                    },
+                    "Id": "006gK000000LmnhQAC",
+                    "Name": "Edge Installation",
+                    "StageName": "Closed Won",
+                    "Amount": 50000,
+                    "CloseDate": "2025-01-12"
+                },
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v59.0/sobjects/Opportunity/006gK000000LmniQAC"
+                    },
+                    "Id": "006gK000000LmniQAC",
+                    "Name": "Edge SLA",
+                    "StageName": "Closed Won",
+                    "Amount": 60000,
+                    "CloseDate": "2024-12-08"
+                },
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v59.0/sobjects/Opportunity/006gK000000LmnwQAC"
+                    },
+                    "Id": "006gK000000LmnwQAC",
+                    "Name": "Edge Emergency Generator",
+                    "StageName": "Id. Decision Makers",
+                    "Amount": 35000,
+                    "CloseDate": "2025-03-29"
+                }
+            ]
+        },
+        "Contacts": {
+            "totalSize": 2,
+            "done": true,
+            "records": [
+                {
+                    "attributes": {
+                        "type": "Contact",
+                        "url": "/services/data/v59.0/sobjects/Contact/003gK000000WMiqQAG"
+                    },
+                    "Id": "003gK000000WMiqQAG",
+                    "FirstName": "Rose",
+                    "LastName": "Gonzalez",
+                    "Email": "rose@edge.com",
+                    "Phone": "(512) 757-6000"
+                },
+                {
+                    "attributes": {
+                        "type": "Contact",
+                        "url": "/services/data/v59.0/sobjects/Contact/003gK000000WMirQAG"
+                    },
+                    "Id": "003gK000000WMirQAG",
+                    "FirstName": "Sean",
+                    "LastName": "Forbes",
+                    "Email": "sean@edge.com",
+                    "Phone": "(512) 757-6000"
+                }
+            ]
+        }
+    },
+    {
+        "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001gK000002bpzSQAQ"
+        },
+        "Id": "001gK000002bpzSQAQ",
+        "Name": "Burlington Textiles Corp of America",
+        "Industry": "Apparel",
+        "AnnualRevenue": 350000000,
+        "Opportunities": {
+            "totalSize": 1,
+            "done": true,
+            "records": [
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v59.0/sobjects/Opportunity/006gK000000LmnpQAC"
+                    },
+                    "Id": "006gK000000LmnpQAC",
+                    "Name": "Burlington Textiles Weaving Plant Generator",
+                    "StageName": "Closed Won",
+                    "Amount": 235000,
+                    "CloseDate": "2025-01-27"
+                }
+            ]
+        },
+        "Contacts": {
+            "totalSize": 1,
+            "done": true,
+            "records": [
+                {
+                    "attributes": {
+                        "type": "Contact",
+                        "url": "/services/data/v59.0/sobjects/Contact/003gK000000WMisQAG"
+                    },
+                    "Id": "003gK000000WMisQAG",
+                    "FirstName": "Jack",
+                    "LastName": "Rogers",
+                    "Email": "jrogers@burlington.com",
+                    "Phone": "(336) 222-7000"
+                }
+            ]
+        }
+    },
+    {
+        "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001gK000002bpzTQAQ"
+        },
+        "Id": "001gK000002bpzTQAQ",
+        "Name": "Pyramid Construction Inc.",
+        "Industry": "Construction",
+        "AnnualRevenue": 950000000,
+        "Opportunities": {
+            "totalSize": 1,
+            "done": true,
+            "records": [
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v59.0/sobjects/Opportunity/006gK000000LmncQAC"
+                    },
+                    "Id": "006gK000000LmncQAC",
+                    "Name": "Pyramid Emergency Generators",
+                    "StageName": "Prospecting",
+                    "Amount": 100000,
+                    "CloseDate": "2025-01-30"
+                }
+            ]
+        },
+        "Contacts": {
+            "totalSize": 1,
+            "done": true,
+            "records": [
+                {
+                    "attributes": {
+                        "type": "Contact",
+                        "url": "/services/data/v59.0/sobjects/Contact/003gK000000WMitQAG"
+                    },
+                    "Id": "003gK000000WMitQAG",
+                    "FirstName": "Pat",
+                    "LastName": "Stumuller",
+                    "Email": "pat@pyramid.net",
+                    "Phone": "(014) 427-4427"
+                }
+            ]
+        }
+    },
+    {
+        "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001gK000002bpzUQAQ"
+        },
+        "Id": "001gK000002bpzUQAQ",
+        "Name": "Dickenson plc",
+        "Industry": "Consulting",
+        "AnnualRevenue": 50000000,
+        "Opportunities": {
+            "totalSize": 1,
+            "done": true,
+            "records": [
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v59.0/sobjects/Opportunity/006gK000000LmnSQAS"
+                    },
+                    "Id": "006gK000000LmnSQAS",
+                    "Name": "Dickenson Mobile Generators",
+                    "StageName": "Qualification",
+                    "Amount": 15000,
+                    "CloseDate": "2025-02-03"
+                }
+            ]
+        },
+        "Contacts": {
+            "totalSize": 1,
+            "done": true,
+            "records": [
+                {
+                    "attributes": {
+                        "type": "Contact",
+                        "url": "/services/data/v59.0/sobjects/Contact/003gK000000WMiuQAG"
+                    },
+                    "Id": "003gK000000WMiuQAG",
+                    "FirstName": "Andy",
+                    "LastName": "Young",
+                    "Email": "a_young@dickenson.com",
+                    "Phone": "(785) 241-6200"
+                }
+            ]
+        }
+    },
+    {
+        "attributes": {
+            "type": "Account",
+            "url": "/services/data/v59.0/sobjects/Account/001gK000002bpzVQAQ"
+        },
+        "Id": "001gK000002bpzVQAQ",
+        "Name": "Grand Hotels & Resorts Ltd",
+        "Industry": "Hospitality",
+        "AnnualRevenue": 500000000,
+        "Opportunities": {
+            "totalSize": 5,
+            "done": true,
+            "records": [
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v59.0/sobjects/Opportunity/006gK000000LmnWQAS"
+                    },
+                    "Id": "006gK000000LmnWQAS",
+                    "Name": "Grand Hotels Kitchen Generator",
+                    "StageName": "Id. Decision Makers",
+                    "Amount": 15000,
+                    "CloseDate": "2024-12-13"
+                },
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v59.0/sobjects/Opportunity/006gK000000LmnZQAS"
+                    },
+                    "Id": "006gK000000LmnZQAS",
+                    "Name": "Grand Hotels Guest Portable Generators",
+                    "StageName": "Value Proposition",
+                    "Amount": 250000,
+                    "CloseDate": "2025-03-23"
+                },
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v59.0/sobjects/Opportunity/006gK000000LmnkQAC"
+                    },
+                    "Id": "006gK000000LmnkQAC",
+                    "Name": "Grand Hotels Generator Installations",
+                    "StageName": "Closed Won",
+                    "Amount": 350000,
+                    "CloseDate": "2025-03-06"
+                },
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v59.0/sobjects/Opportunity/006gK000000LmnsQAC"
+                    },
+                    "Id": "006gK000000LmnsQAC",
+                    "Name": "Grand Hotels SLA",
+                    "StageName": "Closed Won",
+                    "Amount": 90000,
+                    "CloseDate": "2024-12-15"
+                },
+                {
+                    "attributes": {
+                        "type": "Opportunity",
+                        "url": "/services/data/v59.0/sobjects/Opportunity/006gK000000LmnuQAC"
+                    },
+                    "Id": "006gK000000LmnuQAC",
+                    "Name": "Grand Hotels Emergency Generators",
+                    "StageName": "Closed Won",
+                    "Amount": 210000,
+                    "CloseDate": "2025-03-04"
+                }
+            ]
+        },
+        "Contacts": {
+            "totalSize": 2,
+            "done": true,
+            "records": [
+                {
+                    "attributes": {
+                        "type": "Contact",
+                        "url": "/services/data/v59.0/sobjects/Contact/003gK000000WMivQAG"
+                    },
+                    "Id": "003gK000000WMivQAG",
+                    "FirstName": "Tim",
+                    "LastName": "Barr",
+                    "Email": "barr_tim@grandhotels.com",
+                    "Phone": "(312) 596-1000"
+                },
+                {
+                    "attributes": {
+                        "type": "Contact",
+                        "url": "/services/data/v59.0/sobjects/Contact/003gK000000WMiwQAG"
+                    },
+                    "Id": "003gK000000WMiwQAG",
+                    "FirstName": "John",
+                    "LastName": "Bond",
+                    "Email": "bond_john@grandhotels.com",
+                    "Phone": "(312) 596-1000"
+                }
+            ]
+        }
+    }
+]
