@@ -169,6 +169,34 @@ def local_index_for_rag(node_dict):
         }
         embedding_index[fname] = emb
 
+def bootstrap_local_index():
+    """Scan DATA_DIR and rebuild the in-memory index from existing files."""
+    files = list(DATA_DIR.glob("neo_*.txt"))
+    if not files:
+        return
+    
+    print(f"[cyan]Bootstrapping local index from {len(files)} existing signal files...[/cyan]")
+    for fpath in files:
+        fname = fpath.name
+        text = fpath.read_text()
+        
+        # Reconstruct metadata from filename and content
+        # Format: neo_Label_ID.txt
+        parts = fname.replace("neo_", "").replace(".txt", "").split("_")
+        if len(parts) >= 2:
+            label = parts[0]
+            sfid = parts[1]
+            
+            emb = get_embedding(text)
+            file_registry[fname] = {
+                "record_id": sfid,
+                "object_type": label,
+                "text": text,
+                "path": str(fpath)
+            }
+            embedding_index[fname] = emb
+    print(f"[green]Bootstrap complete! Local index restored.[/green]")
+
 # ===================================================================
 # GRAPH RAG & SEARCH
 # ===================================================================
@@ -372,4 +400,5 @@ def main():
             break
 
 if __name__ == "__main__":
+    bootstrap_local_index()
     main()
