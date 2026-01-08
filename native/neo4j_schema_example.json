@@ -1,0 +1,51 @@
+{
+    "mappings": {
+        "Account": {
+            "label": "Account",
+            "properties": [
+                "Name",
+                "Industry",
+                "AnnualRevenue"
+            ],
+            "relationships": [
+                {
+                    "field": "Contacts",
+                    "type": "HAS_CONTACT",
+                    "target": "Contact"
+                },
+                {
+                    "field": "Opportunities",
+                    "type": "HAS_OPPORTUNITY",
+                    "target": "Opportunity"
+                }
+            ]
+        },
+        "Contact": {
+            "label": "Contact",
+            "properties": [
+                "FirstName",
+                "LastName",
+                "Email",
+                "Phone"
+            ]
+        },
+        "Opportunity": {
+            "label": "Opportunity",
+            "properties": [
+                "Name",
+                "StageName",
+                "Amount",
+                "CloseDate"
+            ]
+        },
+        "Lead": {
+            "label": "Lead",
+            "properties": [
+                "FirstName",
+                "LastName",
+                "Company",
+                "Status"
+            ]
+        }
+    }
+}
